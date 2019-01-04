@@ -1,12 +1,3 @@
-/* ---- Typed.js config ---- */
-var typed = new Typed('#typed', {
-  stringsElement: '#typed-strings',
-  typeSpeed: 40,
-  backSpeed: 25,
-  backDelay: 900,
-  loop: true,
-});
-
 /* ---- Particles.js config ---- */
 particlesJS("particles-js", {
   "particles": {
@@ -117,4 +108,13 @@ particlesJS("particles-js", {
     }
   },
   "retina_detect": true
+});
+
+/* ---- Typed.js config ---- */
+var typed = new Typed('#typed', {
+  stringsElement: '#typed-strings',
+  typeSpeed: 40,
+  backSpeed: 25,
+  backDelay: 900,
+  loop: true,
 });
