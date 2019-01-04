@@ -1,4 +1,4 @@
-# My Personal Website
+# Personal Website
 
 ### [vbok.github.io](https://vbok.github.io/)
 
