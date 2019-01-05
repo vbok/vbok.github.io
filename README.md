@@ -1,6 +1,6 @@
 # Personal Website
 
-### 🌐 [vbok.github.io](https://vbok.github.io/)
+### 🌐 [vbok.github.io](https://vbok.github.io/) • [vladimirbok.com](https://vladimirbok.com/)
 
 ![Website Demo](img/demo.gif)
 
