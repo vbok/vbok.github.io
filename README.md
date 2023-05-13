@@ -5,6 +5,8 @@
 ![Milky Way galaxy](img/background.jpeg)
 *Image courtesy of NASA/JPL-Caltech*
 <sup>This text will appear smaller.</sup>
+<small>This text will appear smaller.</small>
+
 
 
 Hosted on [GitHub Pages](https://pages.github.com/)
