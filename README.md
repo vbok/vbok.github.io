@@ -4,11 +4,7 @@
 
 ![Milky Way galaxy](img/background.jpeg)
 *Image courtesy of NASA/JPL-Caltech*
-
-<figure>
-  <img src="img/background.jpeg" alt="Description of the image">
-  <figcaption>Caption for the image</figcaption>
-</figure>
+<sup><sub>This text will appear smaller.</sub></sup>
 
 
 Hosted on [GitHub Pages](https://pages.github.com/)
