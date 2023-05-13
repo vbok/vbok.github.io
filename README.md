@@ -3,13 +3,6 @@
 ### [vbok.github.io](https://vbok.github.io/) • [vladimirbok.com](https://vladimirbok.com/)
 
 ![Milky Way galaxy](img/background.jpeg)
-*Image courtesy of NASA/JPL-Caltech*
-<sup>This text will appear smaller.</sup>
-<sub>This text will appear smaller.</sub>
-<sup><sub>This text will appear smaller.</sub></sup>
-<small>This text will appear smaller.</small>
-
-
-
+<sup>Image courtesy of NASA/JPL-Caltech</sup>
 
 Hosted on [GitHub Pages](https://pages.github.com/)
