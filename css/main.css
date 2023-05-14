@@ -27,7 +27,7 @@ body {
     background-image: url('../img/background.jpeg');
     background-size: cover;
     background-position: center;
-    background-attachment: scroll;
+    background-attachment: scroll; /* Default to scroll for mobile devices */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -36,9 +36,12 @@ body {
     min-height: 100%;
 }
 
-@media screen and (min-width: 768px) {
+/* Only apply fixed background for non-iOS devices with screen width 768px or more */
+@media not all and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait), 
+       not all and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape), 
+       screen and (min-width: 768px) {
     body {
-        background-attachment: fixed;
+        background-attachment: fixed; /* Apply fixed background for larger screens */
     }
 }
 
