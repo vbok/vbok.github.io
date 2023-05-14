@@ -39,6 +39,7 @@ body {
 @media screen and (min-width: 768px) {
     body {
         background-image: url('../img/background-large.jpeg'); /* Larger image for larger devices */
+        background-attachment: fixed;
     }
 }
 
