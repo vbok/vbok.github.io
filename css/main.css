@@ -27,7 +27,7 @@ body {
     background-image: url('../img/background-small.jpeg'); /* Default image for mobile or small devices */
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
     display: flex;
     flex-direction: column;
     align-items: center;
