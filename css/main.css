@@ -36,10 +36,7 @@ body {
     min-height: 100%;
 }
 
-/* Only apply fixed background for non-iOS devices with screen width 768px or more */
-@media not all and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait), 
-       not all and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape), 
-       screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
     body {
         background-attachment: fixed; /* Apply fixed background for larger screens */
     }
