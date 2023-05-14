@@ -24,7 +24,7 @@ body {
     padding: 0;
     color: #333;
     line-height: 1.6;
-    background-image: url('../img/background.jpeg');
+    background-image: url('../img/background-small.jpeg'); /* Default to small image */
     background-size: cover;
     background-position: center;
     background-attachment: scroll; /* Default to scroll for mobile devices */
@@ -38,6 +38,7 @@ body {
 
 @media screen and (min-width: 768px) {
     body {
+        background-image: url('../img/background.jpeg'); /* Larger image for larger screens */
         background-attachment: fixed; /* Apply fixed background for larger screens */
     }
 }
