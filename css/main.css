@@ -36,13 +36,6 @@ body {
     min-height: 100%;
 }
 
-@media screen and (min-width: 768px) {
-    body {
-        background-image: url('../img/background.jpeg'); /* Larger image for larger screens */
-        background-attachment: fixed; /* Apply fixed background for larger screens */
-    }
-}
-
 header {
     color: white;
     padding: 15px;
@@ -121,5 +114,12 @@ footer {
 
     .social-link {
         font-size: 18px; /* Decrease font size for smaller devices */
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        background-image: url('../img/background.jpeg'); /* Larger image for larger screens */
+        background-attachment: fixed; /* Apply fixed background for larger screens */
     }
 }
