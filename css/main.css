@@ -45,6 +45,7 @@ header {
 }
 
 .content-container {
+    max-width: 90%;
     position: relative;
     max-width: 800px;
     margin: 0 auto;
