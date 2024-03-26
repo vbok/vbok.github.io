@@ -48,10 +48,6 @@ h1, h2 {
     margin: 20px 0; /* Responsive spacing around headings */
 }
 
-h1 {
-    font-size: 1.25em; /* Makes h1 larger than h2 */
-}
-
 a {
     color: #12372A; /* Dark green for links */
     text-decoration: underline; /* Underline links for clarity */
