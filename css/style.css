@@ -21,7 +21,8 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Two columns by default */
     gap: 20px;
-    align-items: left;
+    align-items: center;
+/*     align-items: left; */
 }
 
 /* .section-1, .section-2 {
