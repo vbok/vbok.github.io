@@ -71,7 +71,7 @@ h1, h2 {
 a {
     color: #12372A; /* Dark green for links */
     text-decoration: underline; /* Underline links for clarity */
-    margin: 0 10px;
+/*     margin: 0 10px; */
 }
 
 a:hover, a:focus {
