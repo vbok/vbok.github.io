@@ -44,9 +44,16 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.1); /* Adds shadow */
+    /* Adding shadow */
+    box-shadow: 0px 4px 8px #12372A; /* X-offset, Y-offset, Blur radius, Color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
 }
 
+/* Hover effect to lift the section */
+.section-1:hover, .section-2:hover {
+    transform: translateY(-5px); /* Moves the section up slightly */
+    box-shadow: 0px 8px 16px #12372A; /* Larger shadow for hover effect */
+}
 
 .profile-img {
     width: 120px;
