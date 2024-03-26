@@ -99,17 +99,24 @@ a:hover, a:focus {
 
 .logos {
     display: flex;
-    justify-content: center; /* Center logos horizontally */
-    flex-wrap: wrap; /* Allow logos to wrap on smaller screens */
-    gap: 20px; /* Space between logos */
-    margin-top: 20px; /* Space below the heading */
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.logo-container {
+    display: inline-flex; /* Keeps the container inline and flex for alignment */
+    justify-content: center; /* Center logo horizontally */
+    align-items: center; /* Center logo vertically */
+    width: 100px; /* Or any fixed width you prefer */
+    height: 100px; /* Height to maintain aspect ratio; adjust as needed */
 }
 
 .logo {
-    max-width: 100px; /* Maximum size to prevent large logos */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Optional: for rounded corners */
-    object-fit: contain; /* Ensures the image is scaled correctly within its container */
+    max-width: 100%; /* Ensures logo doesn't exceed container's width */
+    max-height: 100%; /* Ensures logo doesn't exceed container's height */
+    object-fit: contain; /* Ensures logo scales properly within the container */
 }
 
 .projects-list {
