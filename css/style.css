@@ -97,6 +97,20 @@ a:hover, a:focus {
     margin: 0 15px;
 }
 
+.logos {
+    display: flex;
+    justify-content: center; /* Center logos horizontally */
+    flex-wrap: wrap; /* Allow logos to wrap on smaller screens */
+    gap: 20px; /* Space between logos */
+    margin-top: 20px; /* Space below the heading */
+}
+
+.logo {
+    width: 100px; /* Set a standard width for all logos */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: for rounded corners */
+}
+
 .projects-list {
     list-style-type: none; /* Remove bullet points */
     padding-left: 0; /* Adjust if necessary to align list items */
