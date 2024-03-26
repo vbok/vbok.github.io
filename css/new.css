@@ -1,46 +1,82 @@
-.section-1 {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, h2, p, a, ul, li {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: #FBFADA; /* Off-white background */
+    color: #12372A; /* Dark green for text */
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Adjust based on content */
+    gap: 20px;
+    align-items: center;
+}
+
+.section-1, .section-2 {
+    background: #ADBC9F; /* Light green background for sections */
+    padding: 30px;
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Centers content vertically */
+    justify-content: center;
     text-align: center;
-    height: 100%; /* Take full height of the grid area */
-    padding: 20px; /* Adjust padding as needed */
 }
 
 .profile-img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    margin-bottom: 20px; /* Space between image and name */
-    border: 4px solid #fff;
+    margin-bottom: 20px; /* Adjust spacing between elements */
+    border: 4px solid #FBFADA; /* Off-white border */
 }
 
 h2 {
-    margin-bottom: 20px; /* Space between name and icons */
+    color: #436850; /* Medium green for headers */
+    margin-bottom: 20px;
+}
+
+a {
+    color: #12372A; /* Dark green for links */
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+a:hover, a:focus {
+    color: #436850; /* Medium green for hover/focus states */
 }
 
 .social-icons a {
-    font-size: 2.5rem; /* Larger icons for better visibility */
-    margin: 0 10px; /* Space around icons */
+    font-size: 2.5rem;
+    margin: 0 15px;
 }
 
-/* Ensure the grid container (.grid-2) also behaves responsively */
-.grid-2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns by default */
-    gap: 20px;
-    align-items: center; /* Align items vertically within the grid */
+.projects-list a {
+    padding: 2px 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease-out;
 }
 
-/* Responsive adjustments */
+.projects-list a:hover {
+    background-color: #436850; /* Medium green background for hover */
+    color: #FBFADA; /* Off-white text color on hover */
+    text-decoration: none;
+}
+
 @media (max-width: 768px) {
     .grid-2 {
-        grid-template-columns: 1fr; /* Single column layout on smaller screens */
-    }
-
-    .section-1 {
-        padding-top: 50px;
-        padding-bottom: 50px;
+        grid-template-columns: 1fr; /* Single column on smaller screens */
     }
 }
