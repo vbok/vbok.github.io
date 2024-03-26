@@ -134,4 +134,8 @@ a:hover, a:focus {
     .grid-2 {
         grid-template-columns: 1fr; /* Single column layout on smaller screens */
     }
+
+    .logo {
+        max-width: 80px; /* Smaller logos on smaller screens */
+    }
 }
