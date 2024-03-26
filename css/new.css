@@ -8,16 +8,16 @@
     padding: 0;
 }
 
-body, h2, p, a {
+body, h2, p, a, ul, li {
     font-family: 'Montserrat', sans-serif;
 }
 
 /* Body and Layout */
 body {
-    color: #222; /* Darker text for better contrast */
+    color: #1a202c; /* Darker font color for better contrast */
     line-height: 1.6;
     padding: 20px;
-    background: #eaeaea; /* Lighter background for higher contrast */
+    background: #edf2f7; /* Lighter background for more contrast */
 }
 
 .grid-2 {
@@ -30,67 +30,100 @@ body {
 /* Section Styling */
 .section-1, .section-2 {
     background: #fff;
-    padding: 40px; /* Increased padding for more space */
-    box-shadow: 0 5px 25px rgba(0,0,0,0.15); /* Deeper shadow for more depth */
-    border-radius: 10px; /* Slightly more rounded for a softer look */
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15); /* Stronger shadow for more depth */
+    border-radius: 8px;
     flex: 1;
-    min-width: 320px; /* Adjusted minimum width */
+    min-width: 300px; /* Minimum width of sections */
+    position: relative; /* For positioning the profile image */
 }
 
 /* Typography and Links */
 h2 {
-    margin-bottom: 25px;
-    color: #0056b3; /* More vibrant color for headings */
+    margin-top: 60px; /* Adjusted margin to accommodate for the profile image */
+    margin-bottom: 20px;
+    color: #4a5568; /* Darker shade for headers */
 }
 
 p, a {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     transition: color 0.3s ease-out;
 }
 
 a {
-    color: #0056b3; /* Matching link color to heading for consistency */
+    color: #2b6cb0; /* A more vibrant link color */
     text-decoration: none;
 }
 
 a:hover, a:focus {
-    color: #003d7a; /* Darker shade on hover/focus for contrast */
+    color: #2c5282; /* Darker shade for hover/focus */
     text-decoration: underline;
+}
+
+/* Profile Image */
+.profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: absolute;
+    top: -60px; /* Half outside the section */
+    left: calc(50% - 60px); /* Centered */
+    border: 4px solid #fff; /* Blend with the background */
 }
 
 /* Icons */
 .fab {
-    font-size: 2rem; /* Increased icon size for better visibility */
+    font-size: 2rem; /* Larger icons */
+    margin: 0 12px; /* Increased spacing */
     transition: transform 0.3s ease-out;
-    color: #007bff; /* Brighter icon color for better contrast */
 }
 
 .fab:hover {
-    transform: scale(1.2); /* More noticeable scale effect on hover */
+    transform: scale(1.1);
 }
 
-/* Navigation Icons Flexbox */
-.section-1 {
+/* Social Icons Container */
+.social-icons {
     display: flex;
-    align-items: center;
-    justify-content: space-around; /* Better spacing around icons */
-    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0; /* Added space above and below */
 }
 
 /* Projects List */
-.section-2 a {
-    display: block; /* Makes links block level for the list effect */
-    padding: 8px 0; /* Added padding for touch friendliness */
-    border-bottom: 1px solid #ccc; /* Separator for each project */
+.projects-list {
+    list-style-type: none; /* Removes default list styling */
+    padding-left: 0; /* Removes default padding */
 }
 
-.section-2 a:last-child {
-    border-bottom: none; /* Removes border from the last item */
+.projects-list li {
+    margin-bottom: 8px;
+}
+
+.projects-list a {
+    display: inline-block;
+    transition: background-color 0.3s ease-out;
+}
+
+.projects-list a:hover {
+    background-color: #ebf8ff; /* Light background on hover */
+    padding: 2px 8px; /* Padding for a button-like effect */
+    border-radius: 4px; /* Rounded corners */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .grid-2 {
         flex-direction: column;
+    }
+
+    .section-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 80px; /* Adjust padding to accommodate the profile image */
+    }
+
+    h2 {
+        margin-top: 30px; /* Adjusted for mobile */
     }
 }
