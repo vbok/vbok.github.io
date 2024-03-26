@@ -19,7 +19,7 @@ body {
 
 .grid-2 {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Adjust based on content */
+    grid-template-columns: 1fr 1fr; /* Two columns by default */
     gap: 20px;
     align-items: center;
 }
@@ -39,44 +39,51 @@ body {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    margin-bottom: 20px; /* Adjust spacing between elements */
-    border: 4px solid #FBFADA; /* Off-white border */
+    margin-bottom: 20px; /* Space between image and name */
+    border: 4px solid #FBFADA; /* Border color adjusted to match the background */
 }
 
 h2 {
     color: #436850; /* Medium green for headers */
-    margin-bottom: 20px;
+    margin: 30px 0; /* Responsive spacing around headings */
 }
 
 a {
     color: #12372A; /* Dark green for links */
-    text-decoration: none;
+    text-decoration: underline; /* Underline links for clarity */
     margin: 0 10px;
 }
 
 a:hover, a:focus {
     color: #436850; /* Medium green for hover/focus states */
+    text-decoration: underline; /* Ensure underline persists on hover/focus for clarity */
 }
 
 .social-icons a {
-    font-size: 2.5rem;
+    font-size: 2.5rem; /* Larger icons for better visibility */
     margin: 0 15px;
 }
 
+.projects-list {
+    list-style-type: none; /* Remove bullet points */
+    padding-left: 0; /* Adjust if necessary to align list items */
+}
+
 .projects-list a {
-    padding: 2px 8px;
-    border-radius: 4px;
+    display: block; /* Ensure links take up the full width of the list item */
+    padding: 2px 8px; /* Padding for a button-like effect */
+    border-radius: 4px; /* Rounded corners for aesthetics */
     transition: background-color 0.3s ease-out;
 }
 
 .projects-list a:hover {
     background-color: #436850; /* Medium green background for hover */
     color: #FBFADA; /* Off-white text color on hover */
-    text-decoration: none;
+    text-decoration: none; /* Remove underline on hover for a clean look */
 }
 
 @media (max-width: 768px) {
     .grid-2 {
-        grid-template-columns: 1fr; /* Single column on smaller screens */
+        grid-template-columns: 1fr; /* Single column layout on smaller screens */
     }
 }
