@@ -50,6 +50,7 @@ h1, h2 {
 
 h1 {
     font-size: 1.25em; /* Makes h1 larger than h2 */
+    margin-bottom: 10px;
 }
 
 a {
