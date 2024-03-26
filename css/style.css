@@ -106,9 +106,10 @@ a:hover, a:focus {
 }
 
 .logo {
-    width: 100px; /* Set a standard width for all logos */
+    max-width: 100px; /* Maximum size to prevent large logos */
     height: auto; /* Maintain aspect ratio */
     border-radius: 8px; /* Optional: for rounded corners */
+    object-fit: contain; /* Ensures the image is scaled correctly within its container */
 }
 
 .projects-list {
