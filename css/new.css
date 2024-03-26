@@ -14,10 +14,10 @@ body, h2, p, a {
 
 /* Body and Layout */
 body {
-    color: #333;
+    color: #222; /* Darker text for better contrast */
     line-height: 1.6;
     padding: 20px;
-    background: #f7f7f7;
+    background: #eaeaea; /* Lighter background for higher contrast */
 }
 
 .grid-2 {
@@ -30,51 +30,62 @@ body {
 /* Section Styling */
 .section-1, .section-2 {
     background: #fff;
-    padding: 30px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    border-radius: 8px;
+    padding: 40px; /* Increased padding for more space */
+    box-shadow: 0 5px 25px rgba(0,0,0,0.15); /* Deeper shadow for more depth */
+    border-radius: 10px; /* Slightly more rounded for a softer look */
     flex: 1;
-    min-width: 300px; /* Minimum width of sections */
+    min-width: 320px; /* Adjusted minimum width */
 }
 
 /* Typography and Links */
 h2 {
-    margin-bottom: 20px;
-    color: #007bff;
+    margin-bottom: 25px;
+    color: #0056b3; /* More vibrant color for headings */
 }
 
 p, a {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     transition: color 0.3s ease-out;
 }
 
 a {
-    color: #007bff;
+    color: #0056b3; /* Matching link color to heading for consistency */
     text-decoration: none;
 }
 
 a:hover, a:focus {
-    color: #0056b3;
+    color: #003d7a; /* Darker shade on hover/focus for contrast */
     text-decoration: underline;
 }
 
 /* Icons */
 .fab {
-    margin-right: 10px;
-    font-size: 1.5rem;
+    font-size: 2rem; /* Increased icon size for better visibility */
     transition: transform 0.3s ease-out;
+    color: #007bff; /* Brighter icon color for better contrast */
 }
 
 .fab:hover {
-    transform: scale(1.1);
+    transform: scale(1.2); /* More noticeable scale effect on hover */
 }
 
 /* Navigation Icons Flexbox */
 .section-1 {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around; /* Better spacing around icons */
     flex-wrap: wrap;
+}
+
+/* Projects List */
+.section-2 a {
+    display: block; /* Makes links block level for the list effect */
+    padding: 8px 0; /* Added padding for touch friendliness */
+    border-bottom: 1px solid #ccc; /* Separator for each project */
+}
+
+.section-2 a:last-child {
+    border-bottom: none; /* Removes border from the last item */
 }
 
 /* Responsive Design */
@@ -83,4 +94,3 @@ a:hover, a:focus {
         flex-direction: column;
     }
 }
-
