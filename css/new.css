@@ -60,31 +60,50 @@ a:hover, a:focus {
     text-decoration: underline;
 }
 
-
-
+/* Section-1 Adjustments for Reduced Space */
 .section-1 {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers the content horizontally */
-    text-align: center; /* Ensures text is centered */
-    padding-top: 20px; /* Adds padding to top for spacing, adjust as needed */
+    align-items: center;
+    text-align: center;
+    padding-top: 100px; /* Reduced padding for less space between image and name */
+    position: relative;
 }
 
+/* Profile Image Adjustments */
 .profile-img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    border: 4px solid #fff; /* Adjusts the border color to match the background */
-    margin-bottom: 20px; /* Adds space between the image and the name */
-    object-fit: cover; /* Ensures the image covers the area properly without distortion */
+    position: absolute;
+    top: -60px; /* Adjust if needed to fine-tune position */
+    left: 50%;
+    transform: translateX(-50%);
+    border: 4px solid #fff;
 }
 
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 10px; /* Adjust the gap between icons as needed */
-    margin-top: 20px; /* Adds space between the name and icons */
+/* Enhanced Social Icons */
+.social-icons a {
+    font-size: 2.5rem; /* Increase size of icons */
+    margin: 0 15px; /* Adjust spacing around larger icons */
 }
+
+/* Projects List Links */
+.projects-list a {
+    display: block; /* Makes the link take up the full list item space */
+    transition: background-color 0.3s ease-out;
+    padding: 2px 8px; /* Consistent padding */
+    border-radius: 4px; /* Rounded corners for aesthetics */
+}
+
+.projects-list a:hover {
+    background-color: #ebf8ff; /* Subtle background change on hover */
+    text-decoration: none; /* Optional: Prevents underline on hover */
+    padding: 2px 8px; /* Maintains size on hover, preventing movement */
+}
+
+
+
 
 /* Update to the @media query if necessary to refine responsive behavior */
 @media (max-width: 768px) {
@@ -92,7 +111,6 @@ a:hover, a:focus {
         padding-top: 20px; /* Ensures there's enough space on smaller screens */
     }
 }
-
 
 
 
