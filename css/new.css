@@ -60,32 +60,35 @@ a:hover, a:focus {
     text-decoration: underline;
 }
 
-/* Profile Image */
-.profile-img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    position: absolute;
-    top: -60px; /* Half outside the section */
-    left: calc(50% - 60px); /* Centered */
-    border: 4px solid #fff; /* Blend with the background */
-}
+
 
 .section-1 {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding-top: 80px; /* Adjust if necessary to fit the image */
+    text-align: center; /* Ensures text alignment is centered */
+    padding: 40px 30px; /* Adjust padding as necessary */
+}
+
+.profile-container {
     position: relative;
+    width: 100%; /* Ensure container takes full width for centering */
+    margin-top: -60px; /* Adjust as needed based on the image size */
 }
 
 .profile-img {
-    width: 120px;
-    height: 120px;
+    width: 120px; /* Adjust size as needed */
+    height: 120px; /* Adjust size as needed */
     border-radius: 50%;
-    object-fit: cover; /* Ensures the image covers the area properly without distortion */
     margin-bottom: 20px; /* Space between image and name */
-    border: 4px solid #fff; /* Adjust color based on your design */
+    border: 4px solid #fff; /* Adjust color as needed */
+}
+
+.social-icons {
+    justify-content: center; /* Center social icons */
+    display: flex;
+    gap: 10px; /* Adjust spacing between icons */
 }
 
 
@@ -100,12 +103,6 @@ a:hover, a:focus {
     transform: scale(1.1);
 }
 
-/* Social Icons Container */
-.social-icons {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0; /* Added space above and below */
-}
 
 /* Projects List */
 .projects-list {
