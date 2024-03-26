@@ -57,6 +57,10 @@ body {
     text-align: left;
 }
 
+.section-2 p {
+    margin-bottom: 10px; /* Adjust this value as needed for desired spacing */
+}
+
 /* Hover effect to lift the section */
 .section-1:hover, .section-2:hover {
     transform: translateY(-5px); /* Moves the section up slightly */
