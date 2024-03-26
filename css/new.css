@@ -59,23 +59,21 @@ a:hover, a:focus {
     text-decoration: underline;
 }
 
-/* Section-1 Adjustments */
 .section-1 {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding-top: 140px; /* Adjust to reduce the space between image and name */
+    padding-top: 80px; /* Reduce this value as needed */
     position: relative;
 }
 
-/* Profile Image Adjustments */
 .profile-img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
     position: absolute;
-    top: -60px; /* Adjust to fine-tune position */
+    top: -60px; /* Adjust if necessary but this should be fine if the image is 120px in height */
     left: 50%;
     transform: translateX(-50%);
     border: 4px solid #fff;
