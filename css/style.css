@@ -102,7 +102,7 @@ a:hover, a:focus {
     justify-content: center;
     flex-wrap: wrap;
     gap: 30px;
-/*     margin-top: 20px; */
+    margin-bottom: 20px;
 }
 
 .logo-container {
