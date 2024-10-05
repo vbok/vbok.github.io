@@ -15,6 +15,16 @@
             margin: 0;
             padding: 0;
         }
+        a {
+            color: #0077b5;
+            text-decoration: none;
+            border-bottom: 2px solid transparent;
+            transition: color 0.3s ease, border-bottom 0.3s ease;
+        }
+        a:hover {
+            color: #005f87;
+            border-bottom: 2px solid #005f87;
+        }
         .container {
             max-width: 800px;
             margin: 0 auto;
@@ -94,6 +104,17 @@
         .contact-button:hover {
             background-color: #005f87;
         }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
     </style>
 </head>
 <body>
@@ -127,13 +148,13 @@
             <p>I have previously worked at Meta, Microsoft, and Harvard University, where I contributed to the development and research of AI-driven solutions and technologies.</p>
             <div class="logos">
                 <div class="logo-container">
-                    <img src="img/meta-logo.png" alt="Meta" class="logo">
+                    <img src="img/meta-logo.png" alt="Meta logo representing my experience at Meta" class="logo">
                 </div>
                 <div class="logo-container">
-                    <img src="img/microsoft-logo.png" alt="Microsoft" class="logo">
+                    <img src="img/microsoft-logo.png" alt="Microsoft logo representing my experience at Microsoft" class="logo">
                 </div>
                 <div class="logo-container">
-                    <img src="img/harvard-logo.png" alt="Harvard" class="logo">
+                    <img src="img/harvard-logo.png" alt="Harvard logo representing my experience at Harvard University" class="logo">
                 </div>
             </div>
         </div>
@@ -144,5 +165,9 @@
             <a href="mailto:vlad@miragesecurity.ai" class="contact-button">Contact Me</a>
         </div>
     </div>
+
+    <footer>
+        <p>&copy; 2024 Vladimir Bok. All rights reserved.</p>
+    </footer>
 </body>
 </html>
