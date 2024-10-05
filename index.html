@@ -11,65 +11,73 @@
     <style>
         body {
             font-family: 'Helvetica Neue', sans-serif;
-            background-color: #e0e0e0;
+            background: linear-gradient(135deg, #ececec, #f7f7f7);
             color: #333;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
         }
         .grid-2 {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 30px;
-            max-width: 800px;
-            margin: 20px auto;
-            padding: 20px;
+            gap: 20px;
+            max-width: 900px;
+            width: 90%;
+            margin: 40px auto;
+            padding: 30px;
             background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 16px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
         }
         @media (min-width: 768px) {
             .grid-2 {
                 grid-template-columns: 1fr 2fr;
+                gap: 40px;
             }
         }
         .section-1 {
             text-align: center;
         }
         .profile-img {
-            width: 120px;
-            height: 120px;
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
-            border: 3px solid #555;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            border: 3px solid #0077b5;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
         }
         .social-icons {
-            margin-top: 15px;
+            margin-top: 20px;
         }
         .social-icons a {
-            margin: 0 10px;
-            color: #555;
-            font-size: 22px;
-            transition: color 0.3s ease;
+            margin: 0 12px;
+            color: #0077b5;
+            font-size: 24px;
+            transition: transform 0.3s ease, color 0.3s ease;
         }
         .social-icons a:hover {
-            color: #0077b5;
+            color: #005f87;
+            transform: scale(1.1);
         }
         .section-2 h2 {
-            color: #333;
-            margin-bottom: 10px;
+            color: #0077b5;
+            margin-bottom: 12px;
+            font-size: 1.5em;
         }
         .logos {
             display: flex;
-            justify-content: space-evenly;
+            justify-content: space-around;
             align-items: center;
             margin: 20px 0;
         }
         .logo-container {
-            width: 70px;
+            width: 80px;
             transition: transform 0.3s ease;
         }
         .logo-container:hover {
-            transform: scale(1.1);
+            transform: scale(1.15);
         }
         .logo {
             width: 100%;
@@ -77,20 +85,29 @@
         }
         .contact-button {
             display: inline-block;
-            background-color: #333;
+            background-color: #0077b5;
             color: #ffffff;
-            padding: 10px 20px;
+            padding: 12px 24px;
             text-decoration: none;
-            border-radius: 6px;
+            border-radius: 8px;
             margin-top: 20px;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
         }
         .contact-button:hover {
             background-color: #005f87;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
         .section-2 p {
-            line-height: 1.6;
-            margin-bottom: 15px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+        a {
+            color: #0077b5;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
