@@ -9,72 +9,69 @@
     <title>Vladimir Bok | AI Researcher & Author</title>
     <style>
         body {
-            font-family: 'Helvetica Neue', sans-serif;
-            background-color: #f7f7f7;
-            color: #333;
+            font-family: 'Arial', sans-serif;
+            background-color: #ffffff;
+            color: #222;
             margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            padding: 0;
         }
         .container {
-            max-width: 600px;
-            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        .profile-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .profile-img {
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             margin-bottom: 20px;
         }
         h1 {
-            font-size: 1.8em;
-            margin: 10px 0;
-            color: #0077b5;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        p.subtitle {
+            color: #666;
+            margin-bottom: 20px;
         }
         .social-icons {
-            margin-top: 15px;
+            display: flex;
+            gap: 15px;
+            margin-bottom: 40px;
         }
         .social-icons a {
-            margin: 0 10px;
             color: #0077b5;
-            font-size: 20px;
+            font-size: 1.5em;
             transition: color 0.3s ease;
         }
         .social-icons a:hover {
             color: #005f87;
         }
-        h2 {
-            color: #0077b5;
-            margin: 20px 0 10px;
-            font-size: 1.4em;
+        .section {
+            margin-bottom: 30px;
         }
-        p {
+        .section h2 {
+            font-size: 1.5em;
+            color: #0077b5;
+            margin-bottom: 10px;
+        }
+        .section p {
             line-height: 1.6;
-            font-size: 1em;
             margin-bottom: 15px;
-        }
-        a {
-            color: #0077b5;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
         }
         .contact-button {
             display: inline-block;
             background-color: #0077b5;
             color: #ffffff;
-            padding: 10px 20px;
+            padding: 10px 25px;
             text-decoration: none;
-            border-radius: 6px;
+            border-radius: 5px;
             transition: background-color 0.3s ease;
         }
         .contact-button:hover {
@@ -84,30 +81,40 @@
 </head>
 <body>
     <div class="container">
-        <img src="img/headshot-square.png" alt="Vladimir Bok" class="profile-img">
-        <h1>Vladimir Bok</h1>
-        <p><em>AI Researcher & Author</em></p>
-        <div class="social-icons">
-            <a href="https://twitter.com/vladimirbok" aria-label="Twitter">
-                <i class="fa-brands fa-twitter"></i></a>
-            <a href="https://www.linkedin.com/in/vladimir-bok/" aria-label="LinkedIn">
-                <i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://scholar.google.com/citations?user=z2pkokEAAAAJ" aria-label="Google Scholar">
-                <i class="fa-solid fa-graduation-cap"></i></a>
+        <div class="profile-header">
+            <img src="img/headshot-square.png" alt="Vladimir Bok" class="profile-img">
+            <h1>Vladimir Bok</h1>
+            <p class="subtitle">AI Researcher & Author</p>
+            <div class="social-icons">
+                <a href="https://twitter.com/vladimirbok" aria-label="Twitter">
+                    <i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/vladimir-bok/" aria-label="LinkedIn">
+                    <i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="https://scholar.google.com/citations?user=z2pkokEAAAAJ" aria-label="Google Scholar">
+                    <i class="fa-solid fa-graduation-cap"></i></a>
+            </div>
         </div>
 
-        <h2>About Me</h2>
-        <p>I’m an AI researcher, author, and speaker with over a decade of experience in research, data science, and product management. I focus on generative models, deep learning, and ethical AI.</p>
+        <div class="section">
+            <h2>About Me</h2>
+            <p>I’m an AI researcher, author, and speaker with over a decade of experience in research, data science, and product management. My primary focus areas are generative models, deep learning, and ethical AI.</p>
+        </div>
 
-        <h2>My Work</h2>
-        <p>Author of <a href="https://www.manning.com/books/gans-in-action" target="_blank"><em>GANs in Action</em></a> (2019) and the upcoming <em>Generative AI for Images and Video</em> (expected Fall 2024).</p>
+        <div class="section">
+            <h2>My Work</h2>
+            <p>Author of <a href="https://www.manning.com/books/gans-in-action" target="_blank"><em>GANs in Action</em></a> (2019) and the upcoming <em>Generative AI for Images and Video</em> (expected Fall 2024).</p>
+        </div>
 
-        <h2>Experience</h2>
-        <p>Previously at Meta, Microsoft, and Harvard University.</p>
+        <div class="section">
+            <h2>Experience</h2>
+            <p>I have previously worked at Meta, Microsoft, and Harvard University, where I contributed to the development and research of AI-driven solutions and technologies.</p>
+        </div>
 
-        <h2>Connect</h2>
-        <p>Connect on <a href="https://twitter.com/vladimirbok">Twitter</a>, <a href="https://www.linkedin.com/in/vladimir-bok/">LinkedIn</a>, or via email.</p>
-        <a href="mailto:vladimir.bok@example.com" class="contact-button">Contact Me</a>
+        <div class="section">
+            <h2>Connect</h2>
+            <p>If you'd like to collaborate or discuss AI research, feel free to connect with me on <a href="https://twitter.com/vladimirbok">Twitter</a>, <a href="https://www.linkedin.com/in/vladimir-bok/">LinkedIn</a>, or reach out via email.</p>
+            <a href="mailto:vladimir.bok@example.com" class="contact-button">Contact Me</a>
+        </div>
     </div>
 </body>
 </html>
