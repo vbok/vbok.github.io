@@ -1,174 +1,490 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Basic Meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Vladimir Bok — AI Researcher & Author</title>
+    <meta name="description" content="Generative‑AI researcher, author of *GANs in Action* and the upcoming *Image Generation Models*.">
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:title" content="Vladimir Bok — AI Researcher & Author">
+    <meta property="og:description" content="Generative‑AI researcher, book author, and educator focusing on diffusion models, GANs, and applied AI security.">
+    <meta property="og:image" content="/img/headshot-square.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vladimirbok.com/">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Favicons -->
     <link rel="icon" type="image/png" href="favicon.png">
-    <title>Vladimir Bok | AI Researcher & Author</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Icons (Font Awesome 6) -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-bY6gvAyNqVpObPjVf2KlV9pg8FzWvuKoM62eYo4YyU1E9nLe3i7xgY+90FYu+/lTdhTVaB7zkH3C/EFn72Pspg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Styles -->
     <style>
+        :root {
+            --primary: #2563eb;
+            --primary-light: #3b82f6;
+            --text-primary: #0f172a;
+            --text-secondary: #64748b;
+            --text-muted: #94a3b8;
+            --bg: #ffffff;
+            --bg-subtle: #f8fafc;
+            --border: #e2e8f0;
+            --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Reset & Base */
+        *, *::before, *::after { 
+            box-sizing: border-box; 
+        }
+        
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #ffffff;
-            color: #222;
             margin: 0;
-            padding: 0;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
+
         a {
-            color: #0077b5;
+            color: var(--primary);
             text-decoration: none;
-            border-bottom: 2px solid transparent;
-            transition: color 0.3s ease, border-bottom 0.3s ease;
+            transition: var(--transition);
         }
-        a:hover {
-            color: #005f87;
-            border-bottom: 2px solid #005f87;
+        
+        a:hover, a:focus {
+            color: var(--primary-light);
         }
+        
+        img { 
+            max-width: 100%; 
+            height: auto;
+            display: block; 
+        }
+
+        /* Layout */
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 0 2rem;
         }
-        .profile-header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+
+        header {
+            padding: 4rem 0 2rem;
             text-align: center;
         }
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-bottom: 20px;
+
+        main {
+            padding-bottom: 4rem;
         }
+
+        footer {
+            background: var(--bg-subtle);
+            border-top: 1px solid var(--border);
+            text-align: center;
+            padding: 2rem 0;
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        footer a {
+            color: inherit;
+            text-decoration: underline;
+        }
+
+        /* Typography */
         h1 {
-            font-size: 2em;
-            margin-bottom: 10px;
+            font-size: 3rem;
+            font-weight: 600;
+            margin: 0 0 0.5rem;
+            letter-spacing: -0.025em;
+            line-height: 1.2;
         }
-        p.subtitle {
-            color: #666;
-            margin-bottom: 20px;
+
+        h2 {
+            font-size: 1.875rem;
+            font-weight: 600;
+            margin: 0 0 1.5rem;
+            color: var(--text-primary);
+            letter-spacing: -0.015em;
         }
+
+        .subtitle {
+            color: var(--text-secondary);
+            margin: 0 0 2rem;
+            font-size: 1.25rem;
+            font-weight: 400;
+        }
+
+        /* Profile */
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            box-shadow: var(--shadow-md);
+        }
+
         .social-icons {
             display: flex;
-            gap: 15px;
-            margin-bottom: 40px;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
         }
+
         .social-icons a {
-            color: #0077b5;
-            font-size: 1.5em;
-            transition: color 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            background: var(--bg-subtle);
+            border: 1px solid var(--border);
+            border-radius: 50%;
+            color: var(--text-secondary);
+            font-size: 1.25rem;
+            transition: var(--transition);
         }
+
         .social-icons a:hover {
-            color: #005f87;
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+            transform: translateY(-2px);
         }
+
+        /* Sections */
         .section {
-            margin-bottom: 30px;
+            margin-bottom: 4rem;
         }
-        .section h2 {
-            font-size: 1.5em;
-            color: #0077b5;
-            margin-bottom: 10px;
-        }
+
         .section p {
-            line-height: 1.6;
-            margin-bottom: 15px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
         }
+
+        .section strong {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        /* Books Grid */
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .book {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--border);
+        }
+
+        .book:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .book img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background: var(--bg-subtle);
+        }
+
+        .book-content {
+            padding: 1.5rem;
+        }
+
+        .book-title {
+            font-weight: 600;
+            font-size: 1.125rem;
+            line-height: 1.4;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .book-meta {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+        }
+
+        .book-meta li {
+            margin-bottom: 0.5rem;
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .book-meta li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .book-meta li:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Company Logos */
         .logos {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             align-items: center;
-            margin-top: 20px;
+            gap: 3rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
         }
+
         .logo-container {
-            width: 100px;
-            transition: transform 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            background: var(--bg-subtle);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            transition: var(--transition);
+            opacity: 0.7;
+            padding: 1rem;
         }
+
         .logo-container:hover {
-            transform: scale(1.05);
+            opacity: 1;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
         }
-        .logo {
-            width: 100%;
+
+        .logo-container img {
+            max-width: 100%;
+            max-height: 100%;
             object-fit: contain;
         }
+
+        /* Contact Button */
         .contact-button {
-            display: inline-block;
-            background-color: #0077b5;
-            color: #ffffff;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--primary);
+            color: white;
+            padding: 0.875rem 2rem;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
         }
+
         .contact-button:hover {
-            background-color: #005f87;
-            color: #ffffff;
+            background: var(--primary-light);
+            color: white;
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
         }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            header {
+                padding: 3rem 0 2rem;
+            }
+
+            .books-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .logos {
+                gap: 2rem;
+            }
+
+            .section {
+                margin-bottom: 3rem;
+            }
         }
-        footer p {
-            margin: 0;
-            font-size: 0.9em;
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .social-icons {
+                gap: 1rem;
+            }
+
+            .logos {
+                gap: 1.5rem;
+            }
+
+            .logo-container {
+                width: 60px;
+                height: 60px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="profile-header">
-            <img src="img/headshot-square.png" alt="Vladimir Bok" class="profile-img">
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <img src="img/headshot-square.png" alt="Portrait of Vladimir Bok" class="profile-img">
             <h1>Vladimir Bok</h1>
-            <p class="subtitle">AI Researcher & Author</p>
-            <div class="social-icons">
-                <a href="https://twitter.com/vladimirbok" aria-label="Twitter">
-                    <i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://www.linkedin.com/in/vladimir-bok/" aria-label="LinkedIn">
-                    <i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://scholar.google.com/citations?user=z2pkokEAAAAJ" aria-label="Google Scholar">
-                    <i class="fa-brands fa-google-scholar"></i></a>
-            </div>
+            <p class="subtitle">AI Researcher · Author · Educator</p>
+            <nav class="social-icons" aria-label="social media links">
+                <a href="https://twitter.com/vladimirbok" aria-label="Follow me on X(Twitter)">
+                    <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/vladimir-bok/" aria-label="Connect on LinkedIn">
+                    <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                </a>
+                <a href="https://github.com/GANs-in-Action" aria-label="GitHub repositories">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                </a>
+                <a href="https://scholar.google.com/citations?user=z2pkokEAAAAJ" aria-label="Google Scholar profile">
+                    <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                </a>
+            </nav>
         </div>
+    </header>
 
-        <div class="section">
-            <h2>About Me</h2>
-            <p>I’m an AI researcher, author, and educator with over a decade of experience in research, data science, and product management. My primary focus areas are generative models, applied AI research, and ethical AI.</p>
-        </div>
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <!-- About -->
+            <section class="section" aria-labelledby="about-heading">
+                <h2 id="about-heading">About</h2>
+                <p>I'm a generative‑AI researcher and author with 10+ years of experience spanning applied research, data science, and product leadership roles. My current work explores <strong>diffusion models</strong>, <strong>LLM‑based security agents</strong>, and the ethical deployment of AI in high‑stakes domains.</p>
+            </section>
 
-        <div class="section">
-            <h2>My Work</h2>
-            <p>Author of <a href="https://www.manning.com/books/gans-in-action" target="_blank"><em>GANs in Action</em></a> (Manning, 2019) and the upcoming <a href="https://www.manning.com/books/generative-ai-in-computer-vision" target="_blank"><em>Generative AI in Computer Vision</em></a> (expected Spring 2025).</p>
-        </div>
+            <!-- Books & Publications -->
+            <section class="section" aria-labelledby="books-heading">
+                <h2 id="books-heading">Books & Publications</h2>
+                <div class="books-grid">
+                    <!-- GANs in Action -->
+                    <article class="book">
+                        <img src="img/book-gans-in-action-cover.png" alt="Cover of GANs in Action">
+                        <div class="book-content">
+                            <div class="book-title">
+                                <em><a href="https://www.manning.com/books/gans-in-action" target="_blank" rel="noopener">GANs in Action</a></em><br>
+                                <span style="font-weight: 400; color: var(--text-secondary);">Manning Publications, 2019</span>
+                            </div>
+                            <ul class="book-meta">
+                                <li>Translated into 4+ languages</li>
+                                <li>Cited 170+ times in peer‑reviewed literature</li>
+                                <li>Adopted as course material at universities worldwide</li>
+                                <li>Named one of Shortform's "65 Best Computer Vision Books of All Time"</li>
+                                <li>All personal proceeds donated to <a href="https://girlswhocode.com" target="_blank" rel="noopener">Girls Who Code</a></li>
+                            </ul>
+                        </div>
+                    </article>
 
-        <div class="section">
-            <h2>Experience</h2>
-            <p>I have previously worked at Meta, Microsoft, and Harvard University, where I contributed to the development and research of AI-driven solutions and technologies.</p>
-            <div class="logos">
-                <div class="logo-container">
-                    <img src="img/meta-logo.png" alt="Meta logo representing my experience at Meta" class="logo">
+                    <!-- Image Generation Models -->
+                    <article class="book">
+                        <img src="img/book-image-generation-models-cover.png" alt="Cover of Image Generation Models book">
+                        <div class="book-content">
+                            <div class="book-title">
+                                <em><a href="https://www.manning.com/books/generative-ai-in-computer-vision" target="_blank" rel="noopener">Image Generation Models</a></em><br>
+                                <span style="font-weight: 400; color: var(--text-secondary);">Manning Publications, Spring 2025</span>
+                            </div>
+                            <ul class="book-meta">
+                                <li><strong>MEAP</strong> available since September 2024</li>
+                                <li>Hands‑on guide to diffusion, GAN, and transformer‑based vision models</li>
+                            </ul>
+                        </div>
+                    </article>
                 </div>
-                <div class="logo-container">
-                    <img src="img/microsoft-logo.png" alt="Microsoft logo representing my experience at Microsoft" class="logo">
-                </div>
-                <div class="logo-container">
-                    <img src="img/harvard-logo.png" alt="Harvard logo representing my experience at Harvard University" class="logo">
-                </div>
-            </div>
-        </div>
+            </section>
 
-        <div class="section">
-            <h2>Connect</h2>
-            <p>If you'd like to collaborate or discuss AI research, feel free to connect with me on <a href="https://twitter.com/vladimirbok">Twitter</a>, <a href="https://www.linkedin.com/in/vladimir-bok/">LinkedIn</a>, or reach out via email.</p>
-            <a href="mailto:vlad@miragesecurity.ai" class="contact-button">Contact Me</a>
-        </div>
-    </div>
+            <!-- Projects & Open Source -->
+            <section class="section" aria-labelledby="projects-heading">
+                <h2 id="projects-heading">Projects & Open Source</h2>
+                <p>Maintainer of the open‑source repository <a href="https://github.com/GANs-in-Action/gans-in-action" target="_blank" rel="noopener"><strong>gans‑in‑action</strong></a> (★ 1k+, 420 forks) — a hands‑on companion to the book that's widely used in classrooms and research prototypes.</p>
+            </section>
 
+            <!-- Experience -->
+            <section class="section" aria-labelledby="experience-heading">
+                <h2 id="experience-heading">Experience</h2>
+                <p>I've held research and product roles at Meta, Microsoft, and Harvard University, delivering AI‑powered solutions at scale and mentoring cross‑functional teams.</p>
+                <div class="logos" aria-label="company logos">
+                    <a class="logo-container" href="https://meta.com" target="_blank" aria-label="Meta">
+                        <img src="img/meta-logo.png" alt="Meta logo">
+                    </a>
+                    <a class="logo-container" href="https://www.microsoft.com" target="_blank" aria-label="Microsoft">
+                        <img src="img/microsoft-logo.png" alt="Microsoft logo">
+                    </a>
+                    <a class="logo-container" href="https://www.harvard.edu" target="_blank" aria-label="Harvard University">
+                        <img src="img/harvard-logo.png" alt="Harvard University logo">
+                    </a>
+                </div>
+            </section>
+
+            <!-- Speaking & Media -->
+            <section class="section" aria-labelledby="talks-heading">
+                <h2 id="talks-heading">Speaking & Media</h2>
+                <p>Conference presentation: "<em>Improving Health Literacy for Cognitive Disabilities: An LLM Approach to Personalized After‑Visit Summaries</em>." <strong>Neuroethics 2025 Conference</strong>, organized by the <abbr title="International Neuroethics Society">INS</abbr> & <abbr title="Società Italiana di Neuroetica">SINe</abbr>, Bavarian Academy of Sciences, Munich, Germany.</p>
+            </section>
+
+            <!-- Connect -->
+            <section class="section" aria-labelledby="connect-heading">
+                <h2 id="connect-heading">Connect</h2>
+                <p>Interested in collaborations or expert commentary? Reach out via email or connect on social.</p>
+                <p>
+                    <a href="mailto:vlad@miragesecurity.ai" class="contact-button" aria-label="Send an email to Vladimir">
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                        Email Me
+                    </a>
+                </p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
     <footer>
-        <p>Hosted on <a href="https://pages.github.com/" target="_blank">GitHub Pages</a></p>
+        <div class="container">
+            <p>© <span id="year"></span> Vladimir Bok · Hosted on <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a></p>
+        </div>
     </footer>
+
+    <!-- Scripts -->
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
